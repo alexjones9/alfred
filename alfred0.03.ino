@@ -50,9 +50,10 @@ void MotionDetection(int TRIGPIN, int ECHOPIN, int ROOM) {
   duration = pulseIn(ECHOPIN, HIGH);
   distance = (duration / 2) * 0.0344;
   
-  if (distance >= 400 || distance <= 2){ //range could be calculated at setup so room size doesn't affect?
+  if (distance >= 400 || distance <= 10){ //range could be calculated at setup so room size doesn't affect?
     ++movement;
   }
+  //else reset movement
 
  if movement = 50 {
   digitalWrite(ROOM, LOW);
